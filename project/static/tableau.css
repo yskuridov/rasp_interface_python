@@ -1,0 +1,29 @@
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 25px;
+    width: 75%;
+}
+
+.biggerCell{
+    height: 50px;
+}
+
+button{
+    padding: 3px;
+}
+
+.imageData{
+    width: 350px;
+    height: 350px;
+}
+
+body{
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}

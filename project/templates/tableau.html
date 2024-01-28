@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="../static/tableau.css">
+    <title>Page principale</title>
+</head>
+<body>
+    <table>
+        <tr class="biggerCell">
+            <td>Date et heure</td>
+            <td>{{dateTime}}</td>
+            <td rowspan="4" colspan="3" class="imageData"><img src="{{image}}"</td>
+            <td rowspan="4">
+                <form action="/refresh" method="post">
+                   <button type="submit">Rafraichir</button>
+                </form>
+            </td>
+        </tr>
+        <tr class="biggerCell">
+            <td>Catégorie</td>
+            <td>{{category}}</td>
+        </tr>
+        <tr class="biggerCell">
+            <td>Distance</td>
+            <td>{{distance}} cm</td>
+        </tr>
+        <tr class="biggerCell">
+            <td>SMS</td>
+            <td>{{sms}}</td>
+        </tr>
+        <tr>
+            <td>Température</td>
+            <td colspan="5">{{temperature}} C</td>
+        </tr>
+        <tr>
+            <td>Humidité</td>
+            <td colspan="5">{{humidity}} %</td>
+        </tr>
+        <form id="messageForm" action="/send_message" method="post">
+            <tr class="biggerCell">
+                <td>Message</td>
+                <td colspan="4"><label for="message"></label><input type="text" id="message" name="message" required></td>
+                <td><button type="submit">Envoyer le message</button></td>
+            </tr>
+</form>
+
+    </table>
+</body>
+</html>
